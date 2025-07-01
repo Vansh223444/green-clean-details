@@ -9,50 +9,54 @@ const ServiceSummary = () => {
       title: 'Total No. of Cleanings',
       value: '24',
       icon: CheckCircle2,
-      color: '#04EF96'
+      color: '#04EF96',
+      bgColor: '#04EF9610'
     },
     {
       title: 'Completed Cleanings',
       value: '18',
       icon: RotateCcw,
-      color: '#00C57D'
+      color: '#00C57D',
+      bgColor: '#00C57D10'
     },
     {
       title: 'Remaining Cleanings',
       value: '6',
       icon: Clock,
-      color: '#6366F1'
+      color: '#6366F1',
+      bgColor: '#6366F110'
     },
     {
       title: 'Previous Cleaning Date',
       value: 'Dec 15, 2024',
       icon: Calendar,
-      color: '#6366F1'
+      color: '#6366F1',
+      bgColor: '#6366F110'
     }
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {summaryData.map((item, index) => (
-        <Card key={index} className="border border-gray-200 hover:shadow-md transition-shadow duration-200">
-          <CardHeader className="pb-3">
+        <Card key={index} className="border-2 border-gray-100 hover:border-gray-200 hover:shadow-lg transition-all duration-300 rounded-xl bg-white/50 backdrop-blur-sm">
+          <CardHeader className="pb-4">
             <div className="flex items-center justify-between">
-              <CardTitle className="text-sm font-medium text-gray-600 uppercase tracking-wide">
+              <CardTitle className="text-xs font-bold text-gray-600 uppercase tracking-wider leading-tight">
                 {item.title}
               </CardTitle>
               <div 
-                className="p-2 rounded-full"
-                style={{ backgroundColor: `${item.color}20` }}
+                className="p-3 rounded-xl shadow-sm"
+                style={{ backgroundColor: item.bgColor }}
               >
                 <item.icon 
-                  className="w-4 h-4" 
+                  className="w-5 h-5" 
                   style={{ color: item.color }}
                 />
               </div>
             </div>
           </CardHeader>
           <CardContent className="pt-0">
-            <div className="text-2xl font-bold text-black">{item.value}</div>
+            <div className="text-3xl font-bold text-black tracking-tight">{item.value}</div>
           </CardContent>
         </Card>
       ))}
