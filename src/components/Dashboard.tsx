@@ -67,7 +67,7 @@ const Dashboard = ({ onLogout }: DashboardProps) => {
           </div>
 
           <Card className="border-0 shadow-xl backdrop-blur-sm bg-white/95 rounded-2xl overflow-hidden">
-            <CardHeader style={{ backgroundColor: '#6366F1' }} className="text-white py-6">
+            <CardHeader style={{ backgroundColor: '#8B5CF6' }} className="text-white py-6">
               <CardTitle className="flex items-center space-x-3 text-xl">
                 <Calendar className="w-6 h-6" />
                 <span>Premium AMC Plan - 2024</span>
